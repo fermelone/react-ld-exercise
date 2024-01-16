@@ -70,6 +70,9 @@ To run my submission locally, follow these steps:
 5. Open your web browser and visit `http://localhost:3000` to view and interact with my submission.
 6. If you want to see the targeting flag in action, load the page sending a US region queryParam (`http://localhost:3000/?region=US`)
 
+> [!NOTE]  
+> Don't forget to enable the flags you just created from the LaunchDarkly platform to see the changes reflected on the running site.
+
 ## Additional Resources
 
 During the exercise, I referenced the [React Web SDK Reference](https://docs.launchdarkly.com/sdk/client-side/react/react-web) for additional guidance and information.
