@@ -23,6 +23,52 @@ I have successfully completed the exercise as follows:
 - For bonus points, I incorporated targeting users loading the website from a specific region.
   - To simulate this, I send a custom context with a 'region' element.
   - To see it in action, load the page sending a US region queryParam (`http://localhost:3000/?region=US`)
+ 
+## Running the submission
+
+To run my submission locally, follow these steps:
+
+1. On the LaunchDarkly platform, create a new project.
+2. For this example, we need to create two feature flags:  
+  - The first one is called `imageSwitch`:
+    - It's a simple boolean kill switch 
+  - The second one is called `usersFromUS`:
+    - This one is also a boolean kill switch, but it has a targeting rule that looks like this:
+    - <img width="378" alt="image" src="https://github.com/fermelone/react-ld-exercise/assets/16138087/f257bb54-3b5c-4dd6-b11b-b0e01b6f6df3">
+
+> [!IMPORTANT]  
+> Make sure you make the flags available to the client-side SDK on the flag's advanced settings
+
+### Once you've created the flags:
+
+1. Clone this repository to your local machine.
+
+   ```bash
+   git clone https://github.com/fermelone/react-ld-exercise.git
+   ```
+
+2. Navigate to the project directory.
+
+   ```bash
+   cd react-ld-exercise
+   ```
+
+3. Install the necessary dependencies using npm.
+
+   ```bash
+   npm install
+   ```
+
+4. In src/index.js, set `clientSideID` to your own Client-side ID. You can find this in your LaunchDarkly portal under Account Settings / Projects.
+  
+5. Start the dev server.
+
+   ```bash
+   npm run start
+   ```
+
+5. Open your web browser and visit `http://localhost:3000` to view and interact with my submission.
+6. If you want to see the targeting flag in action, load the page sending a US region queryParam (`http://localhost:3000/?region=US`)
 
 ## Additional Resources
 
