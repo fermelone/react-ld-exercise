@@ -7,7 +7,9 @@ import { asyncWithLDProvider } from 'launchdarkly-react-client-sdk';
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({
-    clientSideID: '65a58f9b630c5d0fb5f48891'
+    // Set clientSideID to your own Client-side ID. You can find this in
+    // your LaunchDarkly portal under Account settings / Projects
+    clientSideID: '' 
   });
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
